@@ -1,5 +1,7 @@
 This is a drawing app made with React, Typescript and Redux
 
+![preview](https://i.imgur.com/cP82hLO.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
