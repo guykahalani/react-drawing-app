@@ -1,0 +1,97 @@
+.toolbar {
+    width: 8%;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.tool {
+    background-color: #753cff;
+    margin: 10px;
+    padding: 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    height: 90px;
+}
+
+.toolIcon {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 40%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.toolMenuWrapper {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    visibility: hidden;
+    max-width: 0%;
+    transition: max-width .5s, visibility .45s;
+    transition-timing-function: ease;
+}
+
+.toolMenu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: #753cff;
+    border-radius: 0 20px 20px 0;
+    padding-left: 50px;
+    list-style: none;
+}
+.toolMenu li {
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0.1s; 
+}
+
+.tool.expand li {
+    opacity: 1;
+    transition: opacity 1s; 
+}
+
+.colorItem {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.sizeItem {
+    background-color: #ffffff;
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    box-sizing: content-box;
+}
+
+.tool.expand .toolMenuWrapper {
+    opacity: 1;
+    visibility: visible;
+    max-width: 600%;
+    transition: max-width .5s;
+    transition-timing-function: ease;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .toolbar {
+        position: absolute;
+    }
+    .tool {
+        height: 60px;
+    }
+}

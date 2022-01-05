@@ -1,0 +1,12 @@
+.drawpad {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    padding: 40px 0;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .drawpad {
+        width: 90vw;
+    }
+}
